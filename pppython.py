@@ -167,7 +167,7 @@ app = Flask(__name__)
 @app.route('/')
 def my_form():
 
-    return render_template('pphtml1.html')
+    return render_template('index.html')
 
 @app.route('/new', methods=['POST'])
 def my_post():
@@ -194,7 +194,7 @@ def my_post():
             hintNumb = 4
             userGuessCount = 0
             print("correct")
-            return render_template("pphtml1.html", num=num, msg=msg)
+            return render_template("index.html", num=num, msg=msg)
         
         elif userCommand != gameChosenChar['name']:
             userGuessCount +=1
@@ -211,7 +211,7 @@ def my_post():
             
             hintNumb1 = str(hintNumb)
             msg = 'Incorrect. Hints left: ' + hintNumb1
-            return render_template("pphtml1.html", msg=msg, hint=hint)
+            return render_template("index.html", msg=msg, hint=hint)
     else:
         
         if userCommand == gameChosenChar['name']:
@@ -223,7 +223,7 @@ def my_post():
             hintNumb1 = ''
             userGuessCount = 0
             print("correct")
-            return render_template("pphtml1.html", num=num, msg=msg)
+            return render_template("index.html", num=num, msg=msg)
         
         else:
             gameChosenChar1 = str(gameChosenChar['name'])
@@ -233,7 +233,7 @@ def my_post():
             hintNumb = 4
             hintNumb1 = ''
             userGuessCount = 0
-            return render_template("pphtml1.html", num=num, msg=msg)
+            return render_template("index.html", num=num, msg=msg)
 
 if __name__== '__main__':
     app.run(debug=True)
