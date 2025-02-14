@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body {background-color: grey; text-align: center; padding-top: 200px;}
+h1 { text-align: center; }
+p { text-align: center; }
+</style>
+<body>
+    <h1>Guess The Classmate</h1>
+    <form action="/new" method="POST">
+         <input type="text" name="text1">
+          <input type="submit", name="my-form" value="submit">
+    </form>
+    <h1>{{ msg }}</h1>
+     <h1>{{ num }}</h1>
+     <p>{{ hint }}</p>
+</body>
+</html>
